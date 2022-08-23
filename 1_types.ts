@@ -34,7 +34,7 @@ sayMyName('Саша');
 // Never
 
 function throwError(message: string):never {
-       throw new Error(message);
+    throw new Error(message);
 }
 
 function infinite() {
@@ -55,21 +55,3 @@ const id12: ID = '12';
 // const id13: ID = true; - не сработает
 
 type SomeType = string | null | undefined; // обычно не использьют null или undefined так как есть void;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
