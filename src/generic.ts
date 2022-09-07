@@ -24,10 +24,35 @@ console.log(merged2.year)
 
 // ============
 
+interface ILength {
+    length: number,
+}
 
-function withCount<T>(value: T): {value: T, count: string} {
+function withCount<T extends ILength>(value: T): {value: T, count: string} {
     return {
         value,
         count: `В этом объекте ${value.length} символов`,
     }
 }
+
+// console.log(withCount('Hello typeScript!'));
+// console.log(withCount(['I', 'am', 'array']));
+// // console.log(withCount(20));
+// console.log(withCount({length: 20}));
+
+// ============
+// function getObjectValue<T extends object, R extends keyof T>(obj: T, key: R) {
+//   return obj[key]
+// }
+//
+// const person = {
+//     name: 'Ivan',
+//     age: 30,
+//     job: 'JavaScript'
+// }
+// console.log(getObjectValue(person, 'name'));
+// console.log(getObjectValue(person, 'age'));
+// console.log(getObjectValue(person, 'job'));
+
+
+class Cl

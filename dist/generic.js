@@ -18,10 +18,28 @@ const merged2 = mergeObjects({ model: 'Ford' }, { year: 2010 });
 // const merged3 = mergeObjects({a: 1}, 'bbb');
 console.log(merged.age);
 console.log(merged2.year);
-// ============
 function withCount(value) {
     return {
         value,
         count: `В этом объекте ${value.length} символов`,
     };
+}
+// console.log(withCount('Hello typeScript!'));
+// console.log(withCount(['I', 'am', 'array']));
+// // console.log(withCount(20));
+// console.log(withCount({length: 20}));
+// ============
+// function getObjectValue<T extends object, R extends keyof T>(obj: T, key: R) {
+//   return obj[key]
+// }
+//
+// const person = {
+//     name: 'Ivan',
+//     age: 30,
+//     job: 'JavaScript'
+// }
+// console.log(getObjectValue(person, 'name'));
+// console.log(getObjectValue(person, 'age'));
+// console.log(getObjectValue(person, 'job'));
+class Cl {
 }
